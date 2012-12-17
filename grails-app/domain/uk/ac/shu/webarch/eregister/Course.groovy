@@ -1,10 +1,9 @@
 package uk.ac.shu.webarch.eregister
 
-class RegClass {
+class Course {
 
-String name
-Instructor instructor
-
+String course_Name
+String course_ID
     static constraints = {
     }
 }
