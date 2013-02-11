@@ -1,9 +1,21 @@
 package uk.ac.shu.webarch.eregister
 
-class Registration_Sheet {
+class RegistrationSheet {
 
-String name
-String student_Number
-    static constraints = {
-    }
+Course course
+
+Date regsheetdate
+
+Set signatures
+
+String additionalnotes
+
+String constraints = {
+	course(nullable:false, blank:false);
+	regsheetdate(nullable:fase, blank:false);
+	additionalnotes(nullable:true, blank:true);
+}
+static mapping = {
+	additionalnotes column: 'course_desc', type:'text'
+}
 }

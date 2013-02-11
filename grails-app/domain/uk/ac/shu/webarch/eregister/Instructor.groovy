@@ -2,17 +2,17 @@ package uk.ac.shu.webarch.eregister
 
 class Instructor {
 
-String name
-String staffNumber
+String staffname
+String staffID
 
-static hasMany = [
-classes_taught_by_this_instructor:RegClass
-]
+set calsses
 
-static mappedBy = [
-classes_taught_by_this_instructor:'instructor'
-]
+static hasMany = [classes:RegClass]
 
-    static constraints = {
+static mappedBy = [classes:'instructor']
+
+static constraints = {
+    name(nullable:false, blank:false,maxSize:256);
+    staffId(nullable:false, blank:false,maxSize:20);
     }
 }

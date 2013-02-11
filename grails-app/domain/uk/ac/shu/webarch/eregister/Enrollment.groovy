@@ -5,7 +5,12 @@ class Enrollment {
 RegClass regclass
 Student enrolledstudent
 
-String present
-    static constraints = {
-    }
+static constraints = {
+  }
+
+  static mapping = {
+    table 'course_student'
+    student column: 'student_fk'
+    course column: 'course_fk'
+  }
 }
