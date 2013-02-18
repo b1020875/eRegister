@@ -1,6 +1,6 @@
 package uk.ac.shu.webarch.eregister
 
-class Registration_Entry {
+class RegistrationEntry {
 
 String name
 String tutor

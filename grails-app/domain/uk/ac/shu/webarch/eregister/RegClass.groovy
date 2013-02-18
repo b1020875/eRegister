@@ -3,11 +3,9 @@ package uk.ac.shu.webarch.eregister
 class RegClass {
 
 String name
-Instructor instructor
+String instructor
 
-course course
-
-set students
+Set students
 
     static hasMany = []
 

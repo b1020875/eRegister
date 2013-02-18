@@ -6,22 +6,16 @@ class Student {
 	String studentNumber
 	String notes
 
-set courses
-
-set classattends
+Set classattends
 
     static hasMany = [
     courses: Enrollment,
-    classAtts: RegisterEntry
+    classattends: RegistrationEntry
   ]
 
-  static mappedBy = [
+  static mapping = [
     courses:'student',
-    classAtts:'student'
+    classattends:'student'
   ]
 
-static constraints = {
-    fullStudentName(nullable:false, blank:false,maxSize:256);
-    studentNumber(nullable:false, blank:false,maxSize:256);
-  }
 }
