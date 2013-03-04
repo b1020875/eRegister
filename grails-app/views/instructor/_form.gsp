@@ -2,14 +2,30 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: instructorInstance, field: 'classes_taught_by_this_instructor', 'error')} ">
-	<label for="classes_taught_by_this_instructor">
-		<g:message code="instructor.classes_taught_by_this_instructor.label" default="Classestaughtbythisinstructor" />
+<div class="fieldcontain ${hasErrors(bean: instructorInstance, field: 'staffname', 'error')} required">
+	<label for="staffname">
+		<g:message code="instructor.staffname.label" default="Staffname" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="staffname" required="" value="${instructorInstance?.staffname}"/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: instructorInstance, field: 'staffId', 'error')} required">
+	<label for="staffId">
+		<g:message code="instructor.staffId.label" default="Staff Id" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="staffId" required="" value="${instructorInstance?.staffId}"/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: instructorInstance, field: 'classes', 'error')} ">
+	<label for="classes">
+		<g:message code="instructor.classes.label" default="Classes" />
 		
 	</label>
 	
 <ul class="one-to-many">
-<g:each in="${instructorInstance?.classes_taught_by_this_instructor?}" var="c">
+<g:each in="${instructorInstance?.classes?}" var="c">
     <li><g:link controller="regClass" action="show" id="${c.id}">${c?.encodeAsHTML()}</g:link></li>
 </g:each>
 <li class="add">
@@ -17,21 +33,5 @@
 </li>
 </ul>
 
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: instructorInstance, field: 'name', 'error')} ">
-	<label for="name">
-		<g:message code="instructor.name.label" default="Name" />
-		
-	</label>
-	<g:textField name="name" value="${instructorInstance?.name}"/>
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: instructorInstance, field: 'staffNumber', 'error')} ">
-	<label for="staffNumber">
-		<g:message code="instructor.staffNumber.label" default="Staff Number" />
-		
-	</label>
-	<g:textField name="staffNumber" value="${instructorInstance?.staffNumber}"/>
 </div>
 

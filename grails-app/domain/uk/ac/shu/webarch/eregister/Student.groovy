@@ -6,6 +6,7 @@ class Student {
 	String studentNumber
 	String notes
 
+Set courses
 Set classattends
 
     static hasMany = [

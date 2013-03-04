@@ -23,31 +23,31 @@
 			</g:if>
 			<ol class="property-list instructor">
 			
-				<g:if test="${instructorInstance?.classes_taught_by_this_instructor}">
+				<g:if test="${instructorInstance?.staffname}">
 				<li class="fieldcontain">
-					<span id="classes_taught_by_this_instructor-label" class="property-label"><g:message code="instructor.classes_taught_by_this_instructor.label" default="Classestaughtbythisinstructor" /></span>
+					<span id="staffname-label" class="property-label"><g:message code="instructor.staffname.label" default="Staffname" /></span>
 					
-						<g:each in="${instructorInstance.classes_taught_by_this_instructor}" var="c">
-						<span class="property-value" aria-labelledby="classes_taught_by_this_instructor-label"><g:link controller="regClass" action="show" id="${c.id}">${c?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="staffname-label"><g:fieldValue bean="${instructorInstance}" field="staffname"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${instructorInstance?.staffId}">
+				<li class="fieldcontain">
+					<span id="staffId-label" class="property-label"><g:message code="instructor.staffId.label" default="Staff Id" /></span>
+					
+						<span class="property-value" aria-labelledby="staffId-label"><g:fieldValue bean="${instructorInstance}" field="staffId"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${instructorInstance?.classes}">
+				<li class="fieldcontain">
+					<span id="classes-label" class="property-label"><g:message code="instructor.classes.label" default="Classes" /></span>
+					
+						<g:each in="${instructorInstance.classes}" var="c">
+						<span class="property-value" aria-labelledby="classes-label"><g:link controller="regClass" action="show" id="${c.id}">${c?.encodeAsHTML()}</g:link></span>
 						</g:each>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${instructorInstance?.name}">
-				<li class="fieldcontain">
-					<span id="name-label" class="property-label"><g:message code="instructor.name.label" default="Name" /></span>
-					
-						<span class="property-value" aria-labelledby="name-label"><g:fieldValue bean="${instructorInstance}" field="name"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${instructorInstance?.staffNumber}">
-				<li class="fieldcontain">
-					<span id="staffNumber-label" class="property-label"><g:message code="instructor.staffNumber.label" default="Staff Number" /></span>
-					
-						<span class="property-value" aria-labelledby="staffNumber-label"><g:fieldValue bean="${instructorInstance}" field="staffNumber"/></span>
 					
 				</li>
 				</g:if>
