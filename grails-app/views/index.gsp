@@ -2,19 +2,31 @@
 <html>
 	<head>
 		<meta name="layout" content="main"/>
-		<title>Welcome to Grails</title>
+		<title>Registration Application</title>
 	</head>
 
 	<body>
-		<h1> <p> This is Register</p> </h1>
 
-		<g:link controller = "Instructor">Instructors</g:link> <p>
-		<g:link controller = "Student">Students</g:link> <p>
-		<g:link controller = "Enrollment">Enrollment</g:link> <p>
-		<g:link controller = "Course">Courses</g:link> <p>
-		<g:link controller = "RegClass">Registration Class</g:link> <p>
-		<g:link controller = "RegistrationEntry">Registration Entry</g:link> <p>
-		<g:link controller = "RegistrationSheet">Registration Sheet</g:link>
+<div text ="#FFFFFF" id="header" style="background-color:#6C8CD5;text-align:center;">
+ <h1 style="margin-bottom:0;text-align:center;">Registration Main Menu</h1>
+
+		<b><g:link controller = "Instructor">Instructors</g:link> | 
+		<g:link controller = "Student">Students</g:link> | 
+		<g:link controller = "Enrollment">Enrollment</g:link> | 
+		<g:link controller = "Course">Courses</g:link> | 
+		<g:link controller = "Classes">Registration Class</g:link> |  
+		<g:link controller = "RegistrationEntry">Registration Entry</g:link> |  
+		<g:link controller = "RegistrationSheet">Registration Sheet</g:link></b>
+
+</div>
+	
+<div id="mainbody" style="background-color:#6C8CD5;text-align:center;">
+<img border="0" src="/eRegister/images/class.jpg" width="580" height="350">
+</div>
+
+<div id="footer" style="background-color:#6C8CD5;clear:both;text-align:center;">
+ Copyright © Frankie Preston 2013</div>
+
 
 	</body>
 </html>

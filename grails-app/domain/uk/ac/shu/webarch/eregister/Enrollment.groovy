@@ -2,8 +2,8 @@ package uk.ac.shu.webarch.eregister
 
 class Enrollment {
 
-RegClass regclass
-Student enrolledstudent
+RegClass regClass
+Student student
 
 static constraints = {
   }
