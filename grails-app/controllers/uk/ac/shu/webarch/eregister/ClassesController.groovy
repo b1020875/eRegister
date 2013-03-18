@@ -2,7 +2,7 @@ package uk.ac.shu.webarch.eregister
 
 import grails.converters.*
 
-class RegClassController{
+class ClassesController{
 
   def index(){
 

@@ -14,7 +14,7 @@
 		<g:link controller = "Student">Students</g:link> | 
 		<g:link controller = "Enrollment">Enrollment</g:link> | 
 		<g:link controller = "Course">Courses</g:link> | 
-		<g:link controller = "Classes">Registration Class</g:link> |  
+		<g:link controller = "RegClass">Registration Class</g:link> |  
 		<g:link controller = "RegistrationEntry">Registration Entry</g:link> |  
 		<g:link controller = "RegistrationSheet">Registration Sheet</g:link></b>
 
