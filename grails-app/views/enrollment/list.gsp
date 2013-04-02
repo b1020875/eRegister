@@ -24,9 +24,9 @@
 				<thead>
 					<tr>
 					
-						<th><g:message code="enrollment.enrolledstudent.label" default="Enrolledstudent" /></th>
+						<th><g:message code="enrollment.enrolledstudent.label" default="Enrolled Student" /></th>
 					
-						<th><g:message code="enrollment.regclass.label" default="Regclass" /></th>
+						<th><g:message code="enrollment.regclass.label" default="Registration Class" /></th>
 					
 					</tr>
 				</thead>

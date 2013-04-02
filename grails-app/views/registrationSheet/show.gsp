@@ -4,7 +4,7 @@
 <html>
 	<head>
 		<meta name="layout" content="main">
-		<g:set var="entityName" value="${message(code: 'registrationSheet.label', default: 'RegistrationSheet')}" />
+		<g:set var="entityName" value="${message(code: 'registrationSheet.label', default: 'Registration Sheet')}" />
 		<title><g:message code="default.show.label" args="[entityName]" /></title>
 	</head>
 	<body>
@@ -17,7 +17,7 @@
 			</ul>
 		</div>
 		<div id="show-registrationSheet" class="content scaffold-show" role="main">
-			<h1><g:message code="default.show.label" args="[entityName]" /></h1>
+			<h1>Registration Sheet Information</h1>
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
@@ -25,7 +25,7 @@
 			
 				<g:if test="${registrationSheetInstance?.additionalnotes}">
 				<li class="fieldcontain">
-					<span id="additionalnotes-label" class="property-label"><g:message code="registrationSheet.additionalnotes.label" default="Additionalnotes" /></span>
+					<span id="additionalnotes-label" class="property-label"><g:message code="registrationSheet.additionalnotes.label" default="Additional Notes" /></span>
 					
 						<span class="property-value" aria-labelledby="additionalnotes-label"><g:fieldValue bean="${registrationSheetInstance}" field="additionalnotes"/></span>
 					
@@ -43,7 +43,7 @@
 			
 				<g:if test="${registrationSheetInstance?.regsheetdate}">
 				<li class="fieldcontain">
-					<span id="regsheetdate-label" class="property-label"><g:message code="registrationSheet.regsheetdate.label" default="Regsheetdate" /></span>
+					<span id="regsheetdate-label" class="property-label"><g:message code="registrationSheet.regsheetdate.label" default="Registration Sheet Date" /></span>
 					
 						<span class="property-value" aria-labelledby="regsheetdate-label"><g:formatDate date="${registrationSheetInstance?.regsheetdate}" /></span>
 					

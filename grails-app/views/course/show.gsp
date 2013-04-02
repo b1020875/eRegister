@@ -17,7 +17,7 @@
 			</ul>
 		</div>
 		<div id="show-course" class="content scaffold-show" role="main">
-			<h1><g:message code="default.show.label" args="[entityName]" /></h1>
+			<h1>Course Information</h1>
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
@@ -43,7 +43,7 @@
 			
 				<g:if test="${courseInstance?.coursedescription}">
 				<li class="fieldcontain">
-					<span id="coursedescription-label" class="property-label"><g:message code="course.coursedescription.label" default="Coursedescription" /></span>
+					<span id="coursedescription-label" class="property-label"><g:message code="course.coursedescription.label" default="Course Description" /></span>
 					
 						<span class="property-value" aria-labelledby="coursedescription-label"><g:fieldValue bean="${courseInstance}" field="coursedescription"/></span>
 					

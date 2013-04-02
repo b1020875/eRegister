@@ -5,6 +5,9 @@ class Enrollment {
 RegClass regClass
 Student student
 
+Set enrolledstudent
+Set regclass
+
 static constraints = {
   }
 

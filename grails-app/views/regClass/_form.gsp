@@ -7,7 +7,7 @@
 		<g:message code="regClass.instructor.label" default="Instructor" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="instructor" name="instructor.id" from="${uk.ac.shu.webarch.eregister.Instructor.list()}" optionKey="id" required="" value="${regClassInstance?.instructor?.id}" class="many-to-one"/>
+	<g:select id="instructor" name="instructor.id" from="${uk.ac.shu.webarch.eregister.Instructor.list()}" optionKey="id" optionValue="staffname" required="" value="${regClassInstance?.instructor?.id}" class="many-to-one"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: regClassInstance, field: 'name', 'error')} ">

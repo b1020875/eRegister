@@ -4,7 +4,7 @@
 <html>
 	<head>
 		<meta name="layout" content="main">
-		<g:set var="entityName" value="${message(code: 'registrationSheet.label', default: 'RegistrationSheet')}" />
+		<g:set var="entityName" value="${message(code: 'registrationSheet.label', default: 'Registration Sheet')}" />
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
 	</head>
 	<body>
@@ -24,11 +24,11 @@
 				<thead>
 					<tr>
 					
-						<g:sortableColumn property="additionalnotes" title="${message(code: 'registrationSheet.additionalnotes.label', default: 'Additionalnotes')}" />
+						<g:sortableColumn property="additionalnotes" title="${message(code: 'registrationSheet.additionalnotes.label', default: 'Additional Notes')}" />
 					
 						<th><g:message code="registrationSheet.course.label" default="Course" /></th>
 					
-						<g:sortableColumn property="regsheetdate" title="${message(code: 'registrationSheet.regsheetdate.label', default: 'Regsheetdate')}" />
+						<g:sortableColumn property="regsheetdate" title="${message(code: 'registrationSheet.regsheetdate.label', default: 'Registration Sheet Date')}" />
 					
 					</tr>
 				</thead>

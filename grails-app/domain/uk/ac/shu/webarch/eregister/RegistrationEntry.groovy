@@ -3,11 +3,9 @@ package uk.ac.shu.webarch.eregister
 class RegistrationEntry {
 
 Student student
-
-long timestamp
+Date timestamp
 
 static constraints = {
-	timestamp(nullable:false, blank:false);
 	}
 
 static mapping = {

@@ -4,7 +4,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: registrationSheetInstance, field: 'additionalnotes', 'error')} ">
 	<label for="additionalnotes">
-		<g:message code="registrationSheet.additionalnotes.label" default="Additionalnotes" />
+		<g:message code="registrationSheet.additionalnotes.label" default="Additional Notes" />
 		
 	</label>
 	<g:textField name="additionalnotes" value="${registrationSheetInstance?.additionalnotes}"/>
@@ -15,14 +15,13 @@
 		<g:message code="registrationSheet.course.label" default="Course" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="course" name="course.id" from="${uk.ac.shu.webarch.eregister.Course.list()}" optionKey="id" required="" value="${registrationSheetInstance?.course?.id}" class="many-to-one"/>
+	<g:select id="course" name="course.id" from="${uk.ac.shu.webarch.eregister.Course.list()}" optionKey="id" optionValue="courseName" required="" value="${registrationSheetInstance?.course?.id}" class="many-to-one"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: registrationSheetInstance, field: 'regsheetdate', 'error')} required">
 	<label for="regsheetdate">
-		<g:message code="registrationSheet.regsheetdate.label" default="Regsheetdate" />
+		<g:message code="registrationSheet.regsheetdate.label" default="Registration Sheet Date" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:datePicker name="regsheetdate" precision="day"  value="${registrationSheetInstance?.regsheetdate}"  />
 </div>
-

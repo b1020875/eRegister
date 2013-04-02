@@ -20,48 +20,58 @@ class BootStrap {
 								courseName:'Web Architectures',
 								coursedescription:'Learn about web structures').save();
 
-	def monday_am_class = RegClass.findByCourseAndName(web_arch_course, 'WebArch-Mondays') ?:
+	def monday_am_class = RegClass.findByCourseAndCode(web_arch_course, 'WebArch-Mondays') ?:
 		new RegClass(name:'WebArch-Mondays',
+			code:'MondayAM',
 			classInstructor:ian_instructor,
 			course:web_arch_course).save();
-	def monday_pm_class = RegClass.findByCourseAndName(programing_course, 'Programing-Mondays') ?:
+	def monday_pm_class = RegClass.findByCourseAndCode(programing_course, 'Programing-Mondays') ?:
 		new RegClass(name:'Programing-Mondays',
+			code:'MondayPM',
 			classInstructor:donald_instructor,
 			course:programing_course).save();
 
-	def tuesday_am_class = RegClass.findByCourseAndName(comp_essen_course, 'CompEssen-Tuesdays') ?:
+	def tuesday_am_class = RegClass.findByCourseAndCode(comp_essen_course, 'CompEssen-Tuesdays') ?:
 		new RegClass(name:'CompEssen-Tuesdays',
+			code:'TuesdayAm',
 			classInstructor:patrick_instructor,
 			course:comp_essen_course).save();
-	def tuesday_pm_class = RegClass.findByCourseAndName(web_arch_course, 'WebArch-Tuesdays') ?:
+	def tuesday_pm_class = RegClass.findByCourseAndCode(web_arch_course, 'WebArch-Tuesdays') ?:
 		new RegClass(name:'WebArch-Tuesdays',
+			code:'TuesdayPM',
 			classInstructor:ian_instructor,
 			course:web_arch_course).save();
 
-	def wednesday_am_class = RegClass.findByCourseAndName(programing_course, 'Programing-Wednesdays') ?:
+	def wednesday_am_class = RegClass.findByCourseAndCode(programing_course, 'Programing-Wednesdays') ?:
 		new RegClass(name:'Programing-Wednesdays',
+			code:'WednesdayAM',
 			classInstructor:donald_instructor,
 			course:programing_course).save();
-	def wednesday_pm_class = RegClass.findByCourseAndName(comp_essen_course, 'CompEssen-Wednesdays') ?:
+	def wednesday_pm_class = RegClass.findByCourseAndCode(comp_essen_course, 'CompEssen-Wednesdays') ?:
 		new RegClass(name:'CompEssen-Wednesdays',
+			code:'WednesdayPM',
 			classInstructor:patrick_instructor,
 			course:comp_essen_course).save();
 
-	def thursday_am_class = RegClass.findByCourseAndName(web_arch_course, 'WebArch-Thursdays') ?:
+	def thursday_am_class = RegClass.findByCourseAndCode(web_arch_course, 'WebArch-Thursdays') ?:
 		new RegClass(name:'WebArch-Thursdays',
+			code:'ThursdayAM',
 			classInstructor:ian_instructor,
 			course:web_arch_course).save();
-	def thursday_pm_class = RegClass.findByCourseAndName(programing_course, 'Programing-Thursdays') ?:
+	def thursday_pm_class = RegClass.findByCourseAndCode(programing_course, 'Programing-Thursdays') ?:
 		new RegClass(name:'Programing-Thursdays',
+			code:'ThursdayPM',
 			classInstructor:donald_instructor,
 			course:programing_course).save();
 
-	def friday_am_class = RegClass.findByCourseAndName(comp_essen_course, 'CompEssen-Fridays') ?:
+	def friday_am_class = RegClass.findByCourseAndCode(comp_essen_course, 'CompEssen-Fridays') ?:
 		new RegClass(name:'CompEssen-Fridays',
+			code:'FridayAM',
 			classInstructor:patrick_instructor,
 			course:comp_essen_course).save();
-	def friday_pm_class = RegClass.findByCourseAndName(web_arch_course, 'WebArch-Fridays') ?:
+	def friday_pm_class = RegClass.findByCourseAndCode(web_arch_course, 'WebArch-Fridays') ?:
 		new RegClass(name:'WebArch-Fridays',
+			code:'FridayPM',
 			classInstructor:ian_instructor,
 			course:web_arch_course).save();
 
@@ -76,7 +86,11 @@ class BootStrap {
 					new Student(studentNumber:'7854a',name:'Eddie Eagle', notes:'Allergic to walls').save();
 
 	def student_a_web_arch = Enrollment.findOrCreateByStudentAndRegClass(student_a,monday_pm_class)
+	def student_b_web_arch = Enrollment.findOrCreateByStudentAndRegClass(student_b,wednesday_pm_class)
+	def student_c_web_arch = Enrollment.findOrCreateByStudentAndRegClass(student_c,thursday_pm_class)
+	def student_d_web_arch = Enrollment.findOrCreateByStudentAndRegClass(student_d,friday_am_class)
 
+	println("Done...");
 
 	    }
 

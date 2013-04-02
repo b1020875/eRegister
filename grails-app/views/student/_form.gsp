@@ -4,7 +4,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'classattends', 'error')} ">
 	<label for="classattends">
-		<g:message code="student.classattends.label" default="Classattends" />
+		<g:message code="student.classattends.label" default="Classes Attending" />
 		
 	</label>
 	<g:select name="classattends" from="${uk.ac.shu.webarch.eregister.RegistrationEntry.list()}" multiple="multiple" optionKey="id" size="5" value="${studentInstance?.classattends*.id}" class="many-to-many"/>

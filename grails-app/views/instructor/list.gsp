@@ -24,9 +24,9 @@
 				<thead>
 					<tr>
 					
-						<g:sortableColumn property="staffname" title="${message(code: 'instructor.staffname.label', default: 'Staffname')}" />
+						<g:sortableColumn property="staffname" title="${message(code: 'instructor.staffname.label', default: 'Staff Name')}" />
 					
-						<g:sortableColumn property="staffId" title="${message(code: 'instructor.staffId.label', default: 'Staff Id')}" />
+						<g:sortableColumn property="staffId" title="${message(code: 'instructor.staffId.label', default: 'Staff ID')}" />
 					
 					</tr>
 				</thead>

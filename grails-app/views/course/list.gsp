@@ -28,7 +28,7 @@
 					
 						<g:sortableColumn property="courseName" title="${message(code: 'course.courseName.label', default: 'Course Name')}" />
 					
-						<g:sortableColumn property="coursedescription" title="${message(code: 'course.coursedescription.label', default: 'Coursedescription')}" />
+						<g:sortableColumn property="coursedescription" title="${message(code: 'course.coursedescription.label', default: 'Course Description')}" />
 					
 					</tr>
 				</thead>
