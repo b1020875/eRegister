@@ -36,7 +36,7 @@
 				<li class="fieldcontain">
 					<span id="student-label" class="property-label"><g:message code="registrationEntry.student.label" default="Student" /></span>
 					
-						<span class="property-value" aria-labelledby="student-label"><g:link controller="student" action="show" id="${registrationEntryInstance?.student?.id}">${registrationEntryInstance?.student?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="student-label"><g:link controller="student" action="show" id="${registrationEntryInstance?.student?.id}">${registrationEntryInstance?.student?.name}</g:link></span>
 					
 				</li>
 				</g:if>

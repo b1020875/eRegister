@@ -3,7 +3,7 @@ package uk.ac.shu.webarch.eregister
 class RegistrationEntry {
 
 Student student
-Date timestamp
+Date timestamp = new Date()
 
 static constraints = {
 	}

@@ -10,10 +10,12 @@ class ClassesController{
 
 	result.ClassList = []
 
-	RegClass.findAll().each { Cls ->
-				result.classList.add([instructorName:cls.classInstructor.name,
-						      courseName:cls.course.courseName,
-						      className:cls.name])
+	RegClass.findAll().each { cls ->
+		result.classList.add([instructorName:cls.classInstructor.name,
+					courseCode:cls.course.courseCode,
+					courseName:cls.course.courseName,
+					classCode:cls.code,
+					className:cls.name])
 		}
 
 withFormat{

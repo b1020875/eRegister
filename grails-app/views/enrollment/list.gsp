@@ -24,9 +24,9 @@
 				<thead>
 					<tr>
 					
-						<th><g:message code="enrollment.enrolledstudent.label" default="Enrolled Student" /></th>
+						<th><g:message code="enrollment.student.label" default="Enrolled Student" /></th>
 					
-						<th><g:message code="enrollment.regclass.label" default="Registration Class" /></th>
+						<th><g:message code="enrollment.regClass.label" default="Class Attending" /></th>
 					
 					</tr>
 				</thead>
@@ -34,9 +34,9 @@
 				<g:each in="${enrollmentInstanceList}" status="i" var="enrollmentInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${enrollmentInstance.id}">${fieldValue(bean: enrollmentInstance, field: "enrolledstudent")}</g:link></td>
+						<td><g:link action="show" id="${enrollmentInstance.id}">${enrollmentInstance.student?.name}</g:link></td>
 					
-						<td>${fieldValue(bean: enrollmentInstance, field: "regclass")}</td>
+						<td>${enrollmentInstance.regClass?.name}</td>
 					
 					</tr>
 				</g:each>

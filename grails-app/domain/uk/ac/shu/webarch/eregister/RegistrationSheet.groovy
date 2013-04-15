@@ -4,10 +4,17 @@ class RegistrationSheet {
 
 Course course
 Date regsheetdate
-Set signatures
 String additionalnotes
+String shortcode
+
+Set signatures
+Set regClass
 
 static mapping = {
-	additionalnotes column: 'course_desc', type:'text'
 }
+
+static constraints = {
+	additionalnotes(nullable:false, blank:false, maxsize:256);
+}
+
 }

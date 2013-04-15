@@ -25,10 +25,12 @@
 					<tr>
 					
 						<g:sortableColumn property="additionalnotes" title="${message(code: 'registrationSheet.additionalnotes.label', default: 'Additional Notes')}" />
-					
+
 						<th><g:message code="registrationSheet.course.label" default="Course" /></th>
-					
+			
 						<g:sortableColumn property="regsheetdate" title="${message(code: 'registrationSheet.regsheetdate.label', default: 'Registration Sheet Date')}" />
+
+						<g:sortableColumn property="shortcode" title="${message(code: 'registrationSheet.shortcode.label', default: 'Short Code')}" />
 					
 					</tr>
 				</thead>
@@ -38,9 +40,12 @@
 					
 						<td><g:link action="show" id="${registrationSheetInstance.id}">${fieldValue(bean: registrationSheetInstance, field: "additionalnotes")}</g:link></td>
 					
-						<td>${fieldValue(bean: registrationSheetInstance, field: "course")}</td>
+						<td>${registrationSheetInstance.course?.courseName}</td>
+
 					
 						<td><g:formatDate date="${registrationSheetInstance.regsheetdate}" /></td>
+
+						<td><g:link action="show" id="${registrationSheetInstance.id}">${fieldValue(bean: registrationSheetInstance, field: "shortcode")}</g:link></td>
 					
 					</tr>
 				</g:each>

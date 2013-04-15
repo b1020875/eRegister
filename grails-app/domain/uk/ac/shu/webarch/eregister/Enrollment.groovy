@@ -2,8 +2,8 @@ package uk.ac.shu.webarch.eregister
 
 class Enrollment {
 
-RegClass regClass
 Student student
+RegClass regClass
 
 Set enrolledstudent
 Set regclass

@@ -23,20 +23,20 @@
 			</g:if>
 			<ol class="property-list enrollment">
 			
-				<g:if test="${enrollmentInstance?.enrolledstudent}">
+				<g:if test="${enrollmentInstance?.student}">
 				<li class="fieldcontain">
-					<span id="enrolledstudent-label" class="property-label"><g:message code="enrollment.enrolledstudent.label" default="Enrolledstudent" /></span>
+					<span id="student-label" class="property-label"><g:message code="enrollment.student.label" default="Enrolled Student" /></span>
 					
-						<span class="property-value" aria-labelledby="enrolledstudent-label"><g:link controller="student" action="show" id="${enrollmentInstance?.enrolledstudent?.id}">${enrollmentInstance?.enrolledstudent?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="student-label"><g:link controller="student" action="show" id="${enrollmentInstance?.student?.id}">${enrollmentInstance.student?.name}</g:link></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${enrollmentInstance?.regclass}">
+				<g:if test="${enrollmentInstance?.regClass}">
 				<li class="fieldcontain">
-					<span id="regclass-label" class="property-label"><g:message code="enrollment.regclass.label" default="Regclass" /></span>
+					<span id="regClass-label" class="property-label"><g:message code="enrollment.regClass.label" default="Class Attending" /></span>
 					
-						<span class="property-value" aria-labelledby="regclass-label"><g:link controller="regClass" action="show" id="${enrollmentInstance?.regclass?.id}">${enrollmentInstance?.regclass?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="regClass-label"><g:link controller="regClass" action="show" id="${enrollmentInstance?.regClass?.id}">${enrollmentInstance.regClass?.name}</g:link></span>
 					
 				</li>
 				</g:if>

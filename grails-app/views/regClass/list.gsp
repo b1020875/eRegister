@@ -20,6 +20,7 @@
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
+
 			<table>
 				<thead>
 					<tr>
@@ -27,21 +28,29 @@
 						<th><g:message code="regClass.instructor.label" default="Instructor" /></th>
 					
 						<g:sortableColumn property="name" title="${message(code: 'regClass.name.label', default: 'Name')}" />
-					
+						<g:sortableColumn property="code" title="${message(code: 'regClass.code.label', default: 'Code')}" />
+						<g:sortableColumn property="course" title="${message(code: 'regClass.course.label', default: 'Course')}" />
+
 					</tr>
 				</thead>
 				<tbody>
 				<g:each in="${regClassInstanceList}" status="i" var="regClassInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${regClassInstance.id}">${fieldValue(bean: regClassInstance, field: "instructor")}</g:link></td>
-					
+						<td><g:link action="show" id="${regClassInstance.id}">${regClassInstance.instructor?.staffname}</g:link></td>
+
 						<td>${fieldValue(bean: regClassInstance, field: "name")}</td>
+
+						<td><g:link action="show" id="${regClassInstance.id}">${fieldValue(bean: regClassInstance, field: "code")}</g:link></td>
+
+						<td><g:link action="show" id="${regClassInstance.id}">${regClassInstance.course?.courseName} </g:link></td>
 					
 					</tr>
 				</g:each>
 				</tbody>
 			</table>
+
+
 			<div class="pagination">
 				<g:paginate total="${regClassInstanceTotal}" />
 			</div>

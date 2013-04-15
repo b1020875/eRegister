@@ -7,14 +7,18 @@
 		<g:message code="registrationEntry.timestamp.label" default="Timestamp" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:datePicker name="timestamp" precision="day"  value="${registrationEntryInstance.timestamp}"  required=""/>
+	<g:formatDate name="timestamp" precision="day"  value="${registrationEntryInstance.timestamp}"  required=""/>
 </div>
+
+
+
 
 <div class="fieldcontain ${hasErrors(bean: registrationEntryInstance, field: 'student', 'error')} required">
 	<label for="student">
 		<g:message code="registrationEntry.student.label" default="Student" />
 		<span class="required-indicator">*</span>
 	</label>
+
 	<g:select id="student" name="student.id" from="${uk.ac.shu.webarch.eregister.Student.list()}" optionKey="id" optionValue="name" required="" value="${registrationEntryInstance?.student?.id}" class="many-to-one"/>
 </div>
 

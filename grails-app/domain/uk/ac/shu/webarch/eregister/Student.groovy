@@ -19,4 +19,9 @@ Set classattends
     classattends:'student'
   ]
 
+static constraints = {
+	name(nullable:false, blank:false, maxsize:256);
+	studentNumber(nullable:false, blank:false, maxsize:20, unique:true);
+}
+
 }

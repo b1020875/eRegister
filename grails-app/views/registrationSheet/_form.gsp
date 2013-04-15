@@ -25,3 +25,11 @@
 	</label>
 	<g:datePicker name="regsheetdate" precision="day"  value="${registrationSheetInstance?.regsheetdate}"  />
 </div>
+
+<div class="fieldcontain ${hasErrors(bean: registrationSheetInstance, field: 'shortcode', 'error')} ">
+	<label for="shortcode">
+		<g:message code="registrationSheet.shortcode.label" default="Short Code" />
+		
+	</label>
+	<g:textField name="shortcode" value="${registrationSheetInstance?.shortcode}"/>
+</div>

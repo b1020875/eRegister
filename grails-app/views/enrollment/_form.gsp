@@ -2,19 +2,21 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: enrollmentInstance, field: 'enrolledstudent', 'error')} required">
-	<label for="enrolledstudent">
-		<g:message code="enrollment.enrolledstudent.label" default="Enrolled Student" />
+
+<div class="fieldcontain ${hasErrors(bean: enrollmentInstance, field: 'student', 'error')} required">
+	<label for="student">
+		<g:message code="enrollment.student.label" default="Student" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="enrolledstudent" name="enrolledstudent.id" from="${uk.ac.shu.webarch.eregister.Student.list()}" optionKey="name" optionValue="name" required="" value="${enrollmentInstance?.enrolledstudent?.id}" class="many-to-one"/>
+	<g:select id="student" name="student.id" from="${uk.ac.shu.webarch.eregister.Student.list()}" optionKey="id" optionValue="name" required="" value="${enrollmentInstance?.student?.id}" class="many-to-one"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: enrollmentInstance, field: 'regclass', 'error')} required">
-	<label for="regclass">
-		<g:message code="enrollment.regclass.label" default="Class" />
+
+<div class="fieldcontain ${hasErrors(bean: enrollmentInstance, field: 'regClass', 'error')} required">
+	<label for="regClass">
+		<g:message code="enrollment.regClass.label" default="Class" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="regclass" name="regclass.id" from="${uk.ac.shu.webarch.eregister.RegClass.list()}" optionKey="id" required="" value="${enrollmentInstance?.regclass?.id}" class="many-to-one"/>
+	<g:select id="regClass" name="regClass.id" from="${uk.ac.shu.webarch.eregister.RegClass.list()}" optionKey="id" optionValue="name" required="" value="${enrollmentInstance?.regClass?.id}" class="many-to-one"/>
 </div>
 

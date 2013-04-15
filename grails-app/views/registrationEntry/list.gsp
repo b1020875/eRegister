@@ -36,7 +36,7 @@
 					
 						<td><g:link action="show" id="${registrationEntryInstance.id}">${fieldValue(bean: registrationEntryInstance, field: "timestamp")}</g:link></td>
 					
-						<td>${fieldValue(bean: registrationEntryInstance, field: "student")}</td>
+						<td>${registrationEntryInstance.student?.name}</td>
 					
 					</tr>
 				</g:each>

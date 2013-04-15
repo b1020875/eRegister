@@ -2,22 +2,26 @@ package uk.ac.shu.webarch.eregister
 
 class RegClass {
 
-	String name
-	String code
 	Instructor instructor
 	Course course
+	String name
+	String code
 
-Set students
+Set enrolledSudents
+Set registrationSheets
 
   static hasMany = [
     enrolledStudents:Enrollment
   ]
 
   static mappedBy = [
-    enrolledStudent:'RegClass'
+    enrolledStudents:'regClass'
   ]
 
-  static constraints = {}
+  static constraints = {
+    code(nullable:false, blank:false, maxsize:20, unique:true);
+    name(nullable:false, blank:false, maxsize:20);
+}
 
   static mapping = {
     classInstructor column:'instructor_fk'

@@ -17,4 +17,9 @@ static mapping = {
 	coursedescription column: 'coursedescription', type: 'text'
 }
 
+static constraints = {
+	courseName(nullable:false, blank:false, maxsize:256);
+	courseID(nullable:false, blank:false, maxsize:20, unique:true);
+}
+
 }

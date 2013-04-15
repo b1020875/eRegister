@@ -36,7 +36,7 @@
 				<li class="fieldcontain">
 					<span id="course-label" class="property-label"><g:message code="registrationSheet.course.label" default="Course" /></span>
 					
-						<span class="property-value" aria-labelledby="course-label"><g:link controller="course" action="show" id="${registrationSheetInstance?.course?.id}">${registrationSheetInstance?.course?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="course-label"><g:link controller="course" action="show" id="${registrationSheetInstance?.course?.id}">${registrationSheetInstance.course?.courseName}</g:link></span>
 					
 				</li>
 				</g:if>
@@ -46,6 +46,15 @@
 					<span id="regsheetdate-label" class="property-label"><g:message code="registrationSheet.regsheetdate.label" default="Registration Sheet Date" /></span>
 					
 						<span class="property-value" aria-labelledby="regsheetdate-label"><g:formatDate date="${registrationSheetInstance?.regsheetdate}" /></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${registrationSheetInstance?.shortcode}">
+				<li class="fieldcontain">
+					<span id="shortcode-label" class="property-label"><g:message code="registrationSheet.shortcode.label" default="Short Code" /></span>
+					
+						<span class="property-value" aria-labelledby="shortcode-label"><g:fieldValue bean="${registrationSheetInstance}" field="shortcode"/></span>
 					
 				</li>
 				</g:if>
