@@ -24,13 +24,13 @@
 				<thead>
 					<tr>
 					
-						<g:sortableColumn property="additionalnotes" title="${message(code: 'registrationSheet.additionalnotes.label', default: 'Additional Notes')}" />
-
-						<th><g:message code="registrationSheet.course.label" default="Course" /></th>
-			
-						<g:sortableColumn property="regsheetdate" title="${message(code: 'registrationSheet.regsheetdate.label', default: 'Registration Sheet Date')}" />
-
 						<g:sortableColumn property="shortcode" title="${message(code: 'registrationSheet.shortcode.label', default: 'Short Code')}" />
+										
+						<th><g:message code="registrationSheet.regClass.label" default="Class" /></th>
+					
+						<g:sortableColumn property="regsheetdate" title="${message(code: 'registrationSheet.regsheetdate.label', default: 'Registration Sheet Date')}"/>
+
+						<g:sortableColumn property="additionalnotes" title="${message(code: 'registrationSheet.additionalnotes.label', default: 'Additional Notes')}" />
 					
 					</tr>
 				</thead>
@@ -38,14 +38,13 @@
 				<g:each in="${registrationSheetInstanceList}" status="i" var="registrationSheetInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${registrationSheetInstance.id}">${fieldValue(bean: registrationSheetInstance, field: "additionalnotes")}</g:link></td>
-					
-						<td>${registrationSheetInstance.course?.courseName}</td>
-
-					
-						<td><g:formatDate date="${registrationSheetInstance.regsheetdate}" /></td>
-
 						<td><g:link action="show" id="${registrationSheetInstance.id}">${fieldValue(bean: registrationSheetInstance, field: "shortcode")}</g:link></td>
+										
+						<td>${registrationSheetInstance.regClass?.name}</td>
+					
+						<td><g:formatDate format="EEE, dd MMM, yyyy" date="${registrationSheetInstance.regsheetdate}" /></td>
+
+						<td>${fieldValue(bean: registrationSheetInstance, field: "additionalnotes")}</td>
 					
 					</tr>
 				</g:each>

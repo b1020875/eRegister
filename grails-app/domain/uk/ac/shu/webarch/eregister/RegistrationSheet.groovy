@@ -2,19 +2,20 @@ package uk.ac.shu.webarch.eregister
 
 class RegistrationSheet {
 
-Course course
-Date regsheetdate
+RegClass regClass
+Date regsheetdate = new Date()
 String additionalnotes
 String shortcode
 
 Set signatures
-Set regClass
+
+static hasMany = [signatures:RegistrationEntry]
 
 static mapping = {
 }
 
 static constraints = {
-	additionalnotes(nullable:false, blank:false, maxsize:256);
+	shortcode(nullable:false, blank:false);
 }
 
 }

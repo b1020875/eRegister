@@ -24,9 +24,11 @@
 				<thead>
 					<tr>
 					
-						<g:sortableColumn property="timestamp" title="${message(code: 'registrationEntry.timestamp.label', default: 'Timestamp')}" />
+						<th><g:message code="registrationEntry.regSheet.label" default="Registration Sheet" /></th>
 					
 						<th><g:message code="registrationEntry.student.label" default="Student" /></th>
+					
+						<g:sortableColumn property="timestamp" title="${message(code: 'registrationEntry.timestamp.label', default: 'Timestamp')}" />
 					
 					</tr>
 				</thead>
@@ -34,9 +36,11 @@
 				<g:each in="${registrationEntryInstanceList}" status="i" var="registrationEntryInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${registrationEntryInstance.id}">${fieldValue(bean: registrationEntryInstance, field: "timestamp")}</g:link></td>
+						<td><g:link action="show" id="${registrationEntryInstance.id}">${registrationEntryInstance.regSheet?.shortcode}</g:link></td>
 					
 						<td>${registrationEntryInstance.student?.name}</td>
+					
+						<td><g:formatDate format="EEE, d MMM, yyyy, HH:mm:ss, z" date="${registrationEntryInstance.timestamp}" /></td>
 					
 					</tr>
 				</g:each>

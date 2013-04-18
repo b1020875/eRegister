@@ -25,10 +25,10 @@
 					<tr>
 					
 						<g:sortableColumn property="name" title="${message(code: 'student.name.label', default: 'Name')}" />
-					
-						<g:sortableColumn property="notes" title="${message(code: 'student.notes.label', default: 'Notes')}" />
-					
+										
 						<g:sortableColumn property="studentNumber" title="${message(code: 'student.studentNumber.label', default: 'Student Number')}" />
+
+						<g:sortableColumn property="notes" title="${message(code: 'student.notes.label', default: 'Notes')}" />
 					
 					</tr>
 				</thead>
@@ -37,10 +37,10 @@
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
 						<td><g:link action="show" id="${studentInstance.id}">${fieldValue(bean: studentInstance, field: "name")}</g:link></td>
-					
-						<td>${fieldValue(bean: studentInstance, field: "notes")}</td>
-					
+										
 						<td>${fieldValue(bean: studentInstance, field: "studentNumber")}</td>
+
+						<td>${fieldValue(bean: studentInstance, field: "notes")}</td>
 					
 					</tr>
 				</g:each>

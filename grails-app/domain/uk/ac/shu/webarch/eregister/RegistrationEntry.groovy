@@ -4,6 +4,7 @@ class RegistrationEntry {
 
 Student student
 Date timestamp = new Date()
+RegistrationSheet regSheet
 
 static constraints = {
 	}

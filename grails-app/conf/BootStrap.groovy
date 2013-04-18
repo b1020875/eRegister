@@ -106,6 +106,16 @@ class BootStrap {
 
 	println("Enrollments have been Completed");
 
+	def reg_sheet_a = RegistrationSheet.findByShortcode('R1') ?:
+					new RegistrationSheet(shortcode:'R1', regsheetdate:12-03-2013, regClass:monday_am_class, additionalnotes:'Last class of the semester').save();
+
+	def reg_sheet_b = RegistrationSheet.findByShortcode('R2') ?:
+					new RegistrationSheet(shortcode:'R2', regsheetdate:14-03-2013, regClass:wednesday_am_class, additionalnotes:'No cakes left today').save();
+
+	def reg_sheet_c = RegistrationSheet.findByShortcode('R3') ?:
+					new RegistrationSheet(shortcode:'R3', regsheetdate:19-03-2013, regClass:wednesday_pm_class, additionalnotes:'More tea needed').save();
+
+
 	println("Done...");
 
 	    }

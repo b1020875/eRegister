@@ -23,20 +23,20 @@
 			</g:if>
 			<ol class="property-list registrationSheet">
 			
-				<g:if test="${registrationSheetInstance?.additionalnotes}">
+				<g:if test="${registrationSheetInstance?.shortcode}">
 				<li class="fieldcontain">
-					<span id="additionalnotes-label" class="property-label"><g:message code="registrationSheet.additionalnotes.label" default="Additional Notes" /></span>
+					<span id="shortcode-label" class="property-label"><g:message code="registrationSheet.shortcode.label" default="Shortcode" /></span>
 					
-						<span class="property-value" aria-labelledby="additionalnotes-label"><g:fieldValue bean="${registrationSheetInstance}" field="additionalnotes"/></span>
+						<span class="property-value" aria-labelledby="shortcode-label"><g:fieldValue bean="${registrationSheetInstance}" field="shortcode"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${registrationSheetInstance?.course}">
+				<g:if test="${registrationSheetInstance?.regClass}">
 				<li class="fieldcontain">
-					<span id="course-label" class="property-label"><g:message code="registrationSheet.course.label" default="Course" /></span>
+					<span id="regClass-label" class="property-label"><g:message code="registrationSheet.regClass.label" default="Class" /></span>
 					
-						<span class="property-value" aria-labelledby="course-label"><g:link controller="course" action="show" id="${registrationSheetInstance?.course?.id}">${registrationSheetInstance.course?.courseName}</g:link></span>
+						<span class="property-value" aria-labelledby="regClass-label"><g:link controller="regClass" action="show" id="${registrationSheetInstance?.regClass?.id}">${registrationSheetInstance?.regClass?.name}</g:link></span>
 					
 				</li>
 				</g:if>
@@ -45,16 +45,28 @@
 				<li class="fieldcontain">
 					<span id="regsheetdate-label" class="property-label"><g:message code="registrationSheet.regsheetdate.label" default="Registration Sheet Date" /></span>
 					
-						<span class="property-value" aria-labelledby="regsheetdate-label"><g:formatDate date="${registrationSheetInstance?.regsheetdate}" /></span>
+						<span class="property-value" aria-labelledby="regsheetdate-label"><g:formatDate format="EEE, dd MMM, yyyy" date="${registrationSheetInstance?.regsheetdate}" /></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${registrationSheetInstance?.shortcode}">
+				<g:if test="${registrationSheetInstance?.signatures}">
 				<li class="fieldcontain">
-					<span id="shortcode-label" class="property-label"><g:message code="registrationSheet.shortcode.label" default="Short Code" /></span>
+					<span id="signatures-label" class="property-label"><g:message code="registrationSheet.signatures.label" default="Signatures" /></span>
 					
-						<span class="property-value" aria-labelledby="shortcode-label"><g:fieldValue bean="${registrationSheetInstance}" field="shortcode"/></span>
+						<g:each in="${registrationSheetInstance.signatures}" var="s">
+						<span class="property-value" aria-labelledby="signatures-label"><g:link controller="registrationEntry" action="show" id="${s.id}">${s?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+
+			
+				<g:if test="${registrationSheetInstance?.additionalnotes}">
+				<li class="fieldcontain">
+					<span id="additionalnotes-label" class="property-label"><g:message code="registrationSheet.additionalnotes.label" default="Additional Notes" /></span>
+					
+						<span class="property-value" aria-labelledby="additionalnotes-label"><g:fieldValue bean="${registrationSheetInstance}" field="additionalnotes"/></span>
 					
 				</li>
 				</g:if>

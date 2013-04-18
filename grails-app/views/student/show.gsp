@@ -25,7 +25,7 @@
 			
 				<g:if test="${studentInstance?.classattends}">
 				<li class="fieldcontain">
-					<span id="classattends-label" class="property-label"><g:message code="student.classattends.label" default="Classattends" /></span>
+					<span id="classattends-label" class="property-label"><g:message code="student.classattends.label" default="Classes Attending" /></span>
 					
 						<g:each in="${studentInstance.classattends}" var="c">
 						<span class="property-value" aria-labelledby="classattends-label"><g:link controller="registrationEntry" action="show" id="${c.id}">${c?.encodeAsHTML()}</g:link></span>
@@ -53,21 +53,22 @@
 					
 				</li>
 				</g:if>
-			
-				<g:if test="${studentInstance?.notes}">
-				<li class="fieldcontain">
-					<span id="notes-label" class="property-label"><g:message code="student.notes.label" default="Notes" /></span>
-					
-						<span class="property-value" aria-labelledby="notes-label"><g:fieldValue bean="${studentInstance}" field="notes"/></span>
-					
-				</li>
-				</g:if>
-			
+						
 				<g:if test="${studentInstance?.studentNumber}">
 				<li class="fieldcontain">
 					<span id="studentNumber-label" class="property-label"><g:message code="student.studentNumber.label" default="Student Number" /></span>
 					
 						<span class="property-value" aria-labelledby="studentNumber-label"><g:fieldValue bean="${studentInstance}" field="studentNumber"/></span>
+					
+				</li>
+				</g:if>
+
+
+				<g:if test="${studentInstance?.notes}">
+				<li class="fieldcontain">
+					<span id="notes-label" class="property-label"><g:message code="student.notes.label" default="Notes" /></span>
+					
+						<span class="property-value" aria-labelledby="notes-label"><g:fieldValue bean="${studentInstance}" field="notes"/></span>
 					
 				</li>
 				</g:if>

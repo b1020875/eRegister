@@ -5,10 +5,19 @@
 <div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'name', 'error')} ">
 	<label for="name">
 		<g:message code="student.name.label" default="Name" />
-		
+		<span class="required-indicator">*</span>
 	</label>
 	<g:textField name="name" value="${studentInstance?.name}"/>
 </div>
+
+<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'studentNumber', 'error')} ">
+	<label for="studentNumber">
+		<g:message code="student.studentNumber.label" default="Student Number" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="studentNumber" value="${studentInstance?.studentNumber}"/>
+</div>
+
 
 <div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'notes', 'error')} ">
 	<label for="notes">
@@ -16,14 +25,6 @@
 		
 	</label>
 	<g:textField name="notes" value="${studentInstance?.notes}"/>
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'studentNumber', 'error')} ">
-	<label for="studentNumber">
-		<g:message code="student.studentNumber.label" default="Student Number" />
-		
-	</label>
-	<g:textField name="studentNumber" value="${studentInstance?.studentNumber}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'courses', 'error')} ">

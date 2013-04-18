@@ -5,7 +5,7 @@
 <div class="fieldcontain ${hasErrors(bean: courseInstance, field: 'courseID', 'error')} ">
 	<label for="courseID">
 		<g:message code="course.courseID.label" default="Course ID" />
-		
+		<span class="required-indicator">*</span>		
 	</label>
 	<g:textField name="courseID" value="${courseInstance?.courseID}"/>
 </div>
@@ -13,7 +13,7 @@
 <div class="fieldcontain ${hasErrors(bean: courseInstance, field: 'courseName', 'error')} ">
 	<label for="courseName">
 		<g:message code="course.courseName.label" default="Course Name" />
-		
+		<span class="required-indicator">*</span>		
 	</label>
 	<g:textField name="courseName" value="${courseInstance?.courseName}"/>
 </div>

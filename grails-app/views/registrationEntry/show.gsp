@@ -23,11 +23,11 @@
 			</g:if>
 			<ol class="property-list registrationEntry">
 			
-				<g:if test="${registrationEntryInstance?.timestamp}">
+				<g:if test="${registrationEntryInstance?.regSheet}">
 				<li class="fieldcontain">
-					<span id="timestamp-label" class="property-label"><g:message code="registrationEntry.timestamp.label" default="Timestamp" /></span>
+					<span id="regSheet-label" class="property-label"><g:message code="registrationEntry.regSheet.label" default="Registration Sheet" /></span>
 					
-						<span class="property-value" aria-labelledby="timestamp-label"><g:fieldValue bean="${registrationEntryInstance}" field="timestamp"/></span>
+						<span class="property-value" aria-labelledby="regSheet-label"><g:link controller="registrationSheet" action="show" id="${registrationEntryInstance?.regSheet?.id}">${registrationEntryInstance?.regSheet?.shortcode}</g:link></span>
 					
 				</li>
 				</g:if>
@@ -37,6 +37,15 @@
 					<span id="student-label" class="property-label"><g:message code="registrationEntry.student.label" default="Student" /></span>
 					
 						<span class="property-value" aria-labelledby="student-label"><g:link controller="student" action="show" id="${registrationEntryInstance?.student?.id}">${registrationEntryInstance?.student?.name}</g:link></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${registrationEntryInstance?.timestamp}">
+				<li class="fieldcontain">
+					<span id="timestamp-label" class="property-label"><g:message code="registrationEntry.timestamp.label" default="Timestamp" /></span>
+					
+						<span class="property-value" aria-labelledby="timestamp-label"><g:formatDate format="EEE, d MMM, yyyy, HH:mm:ss, z" date="${registrationEntryInstance?.timestamp}" /></span>
 					
 				</li>
 				</g:if>
