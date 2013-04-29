@@ -3,6 +3,7 @@ package uk.ac.shu.webarch.eregister
 class Student {
 
 	String name
+	String password
 	String studentNumber
 	String notes
 

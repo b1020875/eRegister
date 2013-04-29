@@ -10,6 +10,14 @@
 	<g:textField name="name" value="${studentInstance?.name}"/>
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'password', 'error')} ">
+	<label for="password">
+		<g:message code="student.password.label" default="Password" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="password" value="${studentInstance?.password}"/>
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'studentNumber', 'error')} ">
 	<label for="studentNumber">
 		<g:message code="student.studentNumber.label" default="Student Number" />

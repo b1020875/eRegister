@@ -4,6 +4,7 @@ class Instructor {
 
 String staffname
 String staffId
+String password
 
 Set classes
 

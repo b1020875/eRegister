@@ -18,6 +18,14 @@
 	<g:textField name="staffId" required="" value="${instructorInstance?.staffId}"/>
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: instructorInstance, field: 'password', 'error')} required">
+	<label for="password">
+		<g:message code="instructor.password.label" default="Password" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="password" required="" value="${instructorInstance?.password}"/>
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: instructorInstance, field: 'classes', 'error')} ">
 	<label for="classes">
 		<g:message code="instructor.classes.label" default="Classes" />
