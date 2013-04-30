@@ -1,6 +1,6 @@
 <html>
  <body>
-  This is classes::index.gsp</br>
+  This is classes::index.gsp
 
    <table
     <thead>

@@ -1,6 +1,6 @@
 <%@ page import="uk.ac.shu.webarch.eregister.Student" %>
 <!DOCTYPE html>
-<html>
+<html id="CreateStudent">
 	<head>
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'student.label', default: 'Student')}" />

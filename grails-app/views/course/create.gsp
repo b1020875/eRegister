@@ -1,6 +1,6 @@
 <%@ page import="uk.ac.shu.webarch.eregister.Course" %>
 <!DOCTYPE html>
-<html>
+<html id="CreateCourse">
 	<head>
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'course.label', default: 'Course')}" />

@@ -1,6 +1,6 @@
 <%@ page import="uk.ac.shu.webarch.eregister.RegClass" %>
 <!DOCTYPE html>
-<html>
+<html id="EditClass">
 	<head>
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'regClass.label', default: 'Class')}" />

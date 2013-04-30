@@ -1,7 +1,6 @@
-
 <%@ page import="uk.ac.shu.webarch.eregister.RegistrationSheet" %>
 <!DOCTYPE html>
-<html>
+<html id="RegistrationSheetList">
 	<head>
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'registrationSheet.label', default: 'Registration Sheet')}" />

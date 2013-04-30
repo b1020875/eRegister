@@ -1,6 +1,6 @@
 <%@ page import="uk.ac.shu.webarch.eregister.RegistrationEntry" %>
 <!DOCTYPE html>
-<html>
+<html id="EditRegister">
 	<head>
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'registrationEntry.label', default: 'RegistrationEntry')}" />

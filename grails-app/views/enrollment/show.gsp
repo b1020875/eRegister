@@ -1,7 +1,7 @@
 
 <%@ page import="uk.ac.shu.webarch.eregister.Enrollment" %>
 <!DOCTYPE html>
-<html>
+<html id="EnrollmentInformation">
 	<head>
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'enrollment.label', default: 'Enrollment')}" />

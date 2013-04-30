@@ -1,7 +1,7 @@
 
 <%@ page import="uk.ac.shu.webarch.eregister.Instructor" %>
 <!DOCTYPE html>
-<html>
+<html id="InstructorList">
 	<head>
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'instructor.label', default: 'Instructor')}" />
