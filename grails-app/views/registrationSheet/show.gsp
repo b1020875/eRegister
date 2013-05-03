@@ -55,7 +55,7 @@
 					<span id="signatures-label" class="property-label"><g:message code="registrationSheet.signatures.label" default="Signatures" /></span>
 					
 						<g:each in="${registrationSheetInstance.signatures}" var="s">
-						<span class="property-value" aria-labelledby="signatures-label"><g:link controller="registrationEntry" action="show" id="${s.id}">${s?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="signatures-label"><g:link controller="registrationEntry" action="show" id="${s.id}">${s?.student?.name}: ${s?.timestamp}</g:link></span>
 						</g:each>
 					
 				</li>
