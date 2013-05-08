@@ -27,7 +27,12 @@ As it stands, a student has those capabilities also, which they shouldn't. The o
 
 This would be implemented in another action that I've not been able to add, where a session is created e.g. an action is added in the session controller which allows the instructor these abilities, but not the student.
 
-##How to Clone
+### Prerequisits
+
+The project needs a running local mysql database called eregister.
+Need to be running in directory: student@WebArch:~/eRegister$
+
+## How to Clone
 https://github.com/b1020875/eRegister
 
 1.  Make sure you’re in the directory: student@WebArch:~/eRegister$
@@ -48,4 +53,6 @@ The student will select 'Register for Class' From here, they'll select the class
 
 The instructor will can modify a register, registration and class.
 
+## Final Notes
 
+I particularly enjoyed the part where I was using the views to edit the interface/content of some of the pages. The domain modelling also, as the use of dropping tables and re-generating the scaffolds to solve some problems really helped.
